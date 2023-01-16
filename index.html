@@ -1,0 +1,22 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <title>currentTarget Test</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onclick="myFunction(event)">
+<p>Click on a paragraph. An alert box will alert the element whose eventlistener triggered the event.</p>
+<p><strong>Note:</strong> The currentTarget property does not necessarily return the element that was clicked on, but the element whose eventlistener triggered the event.</p>
+  <script>
+    function myFunction(event) {
+      /* event.currentTarget tells us on which element the event was attached or the element whose eventListener triggered the event. */
+      alert(event.currentTarget.nodeName); // body
+      /* event.target tells where the event started */
+      alert(event.target.nodeName); // p, strong, or whatever
+      /* FULL ARTICLE */
+      /* https://medium.com/@etherealm/currenttarget-vs-target-in-js-2f3fd3a543e5 */
+    }
+  </script>
+</body>
+</html>
